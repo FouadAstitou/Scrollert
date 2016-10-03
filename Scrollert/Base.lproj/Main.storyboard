@@ -30,14 +30,28 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HorizontalCell" id="dC8-fU-vLD">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HorizontalCell" id="dC8-fU-vLD" customClass="HorizontalCell" customModule="Scrollert" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="5" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8k-tc-NMs">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="o8k-tc-NMs" firstAttribute="centerX" secondItem="dC8-fU-vLD" secondAttribute="centerX" id="HZP-6e-d1B"/>
+                                            <constraint firstItem="o8k-tc-NMs" firstAttribute="centerY" secondItem="dC8-fU-vLD" secondAttribute="centerY" id="fU4-mg-Fot"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="textLabel" destination="o8k-tc-NMs" id="77N-ak-1Qa"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -54,14 +68,28 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VerticalCell" id="SVt-Wc-gX7">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VerticalCell" id="SVt-Wc-gX7" customClass="VerticalCell" customModule="Scrollert" customModuleProvider="target">
                                         <rect key="frame" x="9" y="0.0" width="358" height="572"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="358" height="572"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAY-cM-19u">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="PAY-cM-19u" firstAttribute="centerY" secondItem="SVt-Wc-gX7" secondAttribute="centerY" id="B8H-h8-hdI"/>
+                                            <constraint firstItem="PAY-cM-19u" firstAttribute="centerX" secondItem="SVt-Wc-gX7" secondAttribute="centerX" id="Fdb-hp-vEC"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="textLabel" destination="PAY-cM-19u" id="f90-KG-WNB"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

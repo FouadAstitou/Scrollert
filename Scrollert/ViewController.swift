@@ -12,15 +12,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet var horizontalCollectionView: UICollectionView!
     @IBOutlet var verticalCollectionView: UICollectionView!
     
-    var horizontal = [1,2,3,4,5,6,7,8,9,10]
-    var vertical = [1,2,3,4,5,6,7,8,9,10]
+    var horizontal = ["1","2","3","4","5","6","7","8","9","10"]
+    var vertical = ["1","2","3","4","5","6","7","8","9","10"]
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        horizontalCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "HorizontalCell")
-        verticalCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "VerticalCell")
+//        horizontalCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "HorizontalCell")
+//        verticalCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "VerticalCell")
 
     }
     
@@ -36,24 +36,31 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == horizontalCollectionView {
-            let horizontalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalCell", for: indexPath)
+            let horizontalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalCell", for: indexPath) as! HorizontalCell
             horizontalCell.backgroundColor = UIColor.green
+            horizontalCell.textLabel.text = horizontal[indexPath.row]
             return horizontalCell
         }
             
        else {
             
-            let verticalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "VerticalCell", for: indexPath)
+            let verticalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "VerticalCell", for: indexPath) as! VerticalCell
             verticalCell.backgroundColor = UIColor.orange
+            verticalCell.textLabel.text = vertical[indexPath.row]
             return verticalCell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print("cell \(indexPath.row) selected.")
+        self.verticalCollectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
     }
     
     // MARK: UIScrollViewDelegate
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.horizontalCollectionView {
-            let horizontalScrollPosition = scrollView.contentOffset.x
+            let horizontalScrollPosition = scrollView.contentOffset.x * 30
             self.verticalCollectionView.delegate = nil
             self.verticalCollectionView.contentOffset = CGPoint(x: 0, y: horizontalScrollPosition)
             self.verticalCollectionView.delegate = self

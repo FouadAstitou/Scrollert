@@ -12,6 +12,8 @@
 		2B03975E1DA2837F004EED6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B03975C1DA2837F004EED6C /* Main.storyboard */; };
 		2B0397601DA2837F004EED6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B03975F1DA2837F004EED6C /* Assets.xcassets */; };
 		2B0397631DA2837F004EED6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0397611DA2837F004EED6C /* LaunchScreen.storyboard */; };
+		2B03976B1DA2B14A004EED6C /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B03976A1DA2B14A004EED6C /* HorizontalCell.swift */; };
+		2B03976D1DA2B167004EED6C /* VerticalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B03976C1DA2B167004EED6C /* VerticalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2B03975F1DA2837F004EED6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B0397621DA2837F004EED6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B0397641DA2837F004EED6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B03976A1DA2B14A004EED6C /* HorizontalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
+		2B03976C1DA2B167004EED6C /* VerticalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				2B0397581DA2837F004EED6C /* AppDelegate.swift */,
+				2B03976A1DA2B14A004EED6C /* HorizontalCell.swift */,
+				2B03976C1DA2B167004EED6C /* VerticalCell.swift */,
 				2B03975A1DA2837F004EED6C /* ViewController.swift */,
 				2B03975C1DA2837F004EED6C /* Main.storyboard */,
 				2B03975F1DA2837F004EED6C /* Assets.xcassets */,
@@ -139,6 +145,8 @@
 			files = (
 				2B03975B1DA2837F004EED6C /* ViewController.swift in Sources */,
 				2B0397591DA2837F004EED6C /* AppDelegate.swift in Sources */,
+				2B03976B1DA2B14A004EED6C /* HorizontalCell.swift in Sources */,
+				2B03976D1DA2B167004EED6C /* VerticalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +308,7 @@
 				2B0397691DA2837F004EED6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
